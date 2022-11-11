@@ -11,14 +11,13 @@ jest.mock("./mock3-3",() => {
     }
 })
 
+
 const power = require("./mock3-2").power
 const add = require("./mock3-2").add
 const fetchData = require("./mock3-2").fetchData
 const result = require("./mock3-1")
 const PrintText = require("./mock3-3").PrintText
 const PrintValue = require("./mock3-3").PrintValue
-
-//console.log(require("./mock3-3"))
 
 describe("Test mock several function nested function",() => {
     beforeEach(() => {
@@ -28,12 +27,12 @@ describe("Test mock several function nested function",() => {
         
         //? วิธี 2
         power.mockImplementation((a) => {
-            console.log(a)
+            //console.log(a)
             return a*a
         })
 
         add.mockImplementation((a,b) => {
-            console.log(a+b)
+            //console.log(a+b)
             return a+b
         })
     })
